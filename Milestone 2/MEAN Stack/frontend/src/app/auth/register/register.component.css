@@ -1,0 +1,15 @@
+#register {
+  margin: 10rem 10rem;
+}
+
+#register-header {
+  padding: 0 auto;
+  text-align: center;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: auto;
+}

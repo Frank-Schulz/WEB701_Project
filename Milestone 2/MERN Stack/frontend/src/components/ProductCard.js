@@ -1,19 +1,8 @@
-import { React, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { BsCart, BsCartFill } from "react-icons/bs";
+import { React } from 'react';
+import { Card } from 'react-bootstrap';
 import { FaChevronRight } from "react-icons/fa";
 
 const ProductCard = ({ userInfo, product, cart }) => {
-  const [ inCart, setInCart ] = useState(false);
-
-  const addToCart = async (product) => {
-    // setInCart(true);
-    if (!userInfo) {
-      alert("Please log in to add items to your cart");
-      return
-    }
-    alert("Not yet implemented")
-  }
 
   return (
     <>
@@ -21,7 +10,7 @@ const ProductCard = ({ userInfo, product, cart }) => {
         <Card.Img variant="top" src={product.imagePath} />
       </div>
       <div style={{ display: "flex", position: "absolute", top: "108px" }}>
-        {product.stock && <span className="badge bg-success">{product.stock}</span>}
+        {product.stock && <span className="badge bg-success">{product.stock} In Stock</span>}
       </div>
       <Card.Body>
         <Card.Title style={{ marginTop: "2px", fontSize: "20px"}}>{product.name}</Card.Title>
@@ -29,22 +18,6 @@ const ProductCard = ({ userInfo, product, cart }) => {
           {`${product.description.substring(0, 70)}...`}
         </Card.Text>
         <div>
-          {/* <Button
-            onClick={() => addToCart(product._id)}
-            style={{
-              "backgroundColor": "transparent",
-              "backgroundRepeat": "no-repeat",
-              "border": "none",
-              "overflow": "hidden",
-              "outline": "none",
-              "padding": 0
-            }} >
-            {inCart ? (
-              <BsCartFill style={{ color: '#41d7a7', fontSize: '20px', bottom: 0 }} />
-            ) : (
-              <BsCart onClick={addToCart} style={{ color: '#41d7a7', fontSize: '20px', bottom: 0 }} />
-            )}
-          </Button> */}
           <div style={{ "float": "right", height: "20px", "marginTop": "5px" }}>
             <a
               href={`/products/${product.id}`}

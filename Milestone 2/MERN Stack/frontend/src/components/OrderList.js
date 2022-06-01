@@ -1,7 +1,5 @@
 import { React, useState, useEffect } from 'react'
-
 import axios from 'axios';
-
 import Loading from './Loading';
 
 
@@ -18,7 +16,7 @@ function OrderList({ userID, orderState }) {
 
   const fetchOrders = async () => {
     setLoading(true);
-    // const tokens = await fetchTokens();
+
     const { data } = await axios.post(`/orders/filter/`, await fetchTokens())
     setOrders(data.orders);
 

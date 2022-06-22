@@ -1,7 +1,7 @@
 # WEB701_Project
 
 ### Assessment One - Practice documentation file:
-/Milestone 1/A1 - Practice Documentation
+A1 - Practice Documentation - reviews are in this file
 
 ### Assessment Two - Project documentation file:
 
